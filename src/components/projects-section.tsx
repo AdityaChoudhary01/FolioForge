@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { useToast } from "@/hooks/use-toast"
 import { getAdjustedLayout } from '@/app/actions';
 import ProjectCard from './project-card';
-import { Wand2, Loader2 } from 'lucide-react';
+import { Wand2, Loader2, RotateCcw } from 'lucide-react';
 import type { Project } from '@/types';
 
 const initialProjects: Project[] = [
@@ -94,11 +94,11 @@ export default function ProjectsSection() {
   }
 
   return (
-    <section id="projects" className="py-12 md:py-24 bg-card">
+    <section id="projects" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">Featured Projects</h2>
-          <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">Here are some of the projects I'm proud of. Use the magic wand to re-order them based on your interests!</p>
+        <div className="text-center mb-16">
+          <h2 className="font-headline text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Featured Projects</h2>
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg">Here are some of the projects I'm proud of. Use the magic wand to re-order them based on your interests!</p>
         </div>
 
         <div className="max-w-2xl mx-auto mb-12">
@@ -108,28 +108,36 @@ export default function ProjectsSection() {
                     placeholder="e.g., 'show me projects using real-time databases' or 'I like e-commerce'"
                     value={preferences}
                     onChange={(e) => setPreferences(e.target.value)}
-                    className="pr-12"
+                    className="pr-24 h-12 text-base"
                     disabled={isLoading}
+                    onKeyDown={(e) => e.key === 'Enter' && handleAdjustLayout()}
                 />
                 <Button 
-                    variant="ghost" 
-                    size="icon" 
-                    className="absolute right-1 top-1/2 -translate-y-1/2 h-8 w-8 text-accent hover:text-primary"
+                    className="absolute right-14 top-1/2 -translate-y-1/2 h-9 w-9 bg-accent hover:bg-accent/90 text-accent-foreground rounded-full"
                     onClick={handleAdjustLayout}
                     disabled={isLoading}
                     aria-label="Adjust Layout"
                 >
                     {isLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : <Wand2 className="h-5 w-5" />}
                 </Button>
+                <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    className="absolute right-2 top-1/2 -translate-y-1/2 h-9 w-9"
+                    onClick={handleReset}
+                    disabled={isLoading}
+                    aria-label="Reset Order"
+                >
+                    <RotateCcw className="h-5 w-5" />
+                </Button>
             </div>
-             <div className="flex justify-center mt-4">
-                <Button onClick={handleReset} variant="link" disabled={isLoading}>Reset Order</Button>
-             </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map(project => (
-            <ProjectCard key={project.id} project={project} />
+            <div key={project.id} className="group">
+              <ProjectCard project={project} />
+            </div>
           ))}
         </div>
       </div>

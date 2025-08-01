@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Send } from "lucide-react";
+import { Card, CardContent } from "./ui/card";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -54,13 +55,14 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-12 md:py-24">
+    <section id="contact" className="py-24 md:py-32 bg-gradient-to-br from-background to-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">Get In Touch</h2>
-          <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">Have a question or want to work together? Drop me a line.</p>
+          <h2 className="font-headline text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Get In Touch</h2>
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg">Have a question or want to work together? Drop me a line.</p>
         </div>
-        <div className="max-w-2xl mx-auto">
+        <Card className="max-w-2xl mx-auto p-4 sm:p-8 border-transparent bg-card/80 backdrop-blur-sm">
+         <CardContent className="p-0">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -69,9 +71,9 @@ export default function ContactSection() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Name</FormLabel>
+                      <FormLabel className="text-lg">Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your Name" {...field} />
+                        <Input placeholder="Your Name" {...field} className="h-12" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -82,9 +84,9 @@ export default function ContactSection() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel className="text-lg">Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="your.email@example.com" {...field} />
+                        <Input placeholder="your.email@example.com" {...field} className="h-12"/>
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -96,11 +98,11 @@ export default function ContactSection() {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Message</FormLabel>
+                    <FormLabel className="text-lg">Message</FormLabel>
                     <FormControl>
                       <Textarea
                         placeholder="Tell me how I can help you..."
-                        className="resize-none"
+                        className="resize-none min-h-[150px]"
                         {...field}
                       />
                     </FormControl>
@@ -109,14 +111,15 @@ export default function ContactSection() {
                 )}
               />
               <div className="text-center">
-                <Button type="submit" className="bg-accent hover:bg-accent/90">
-                  <Send className="mr-2 h-4 w-4"/>
+                <Button type="submit" size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                  <Send className="mr-2 h-5 w-5"/>
                   Send Message
                 </Button>
               </div>
             </form>
           </Form>
-        </div>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );

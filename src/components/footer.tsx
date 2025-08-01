@@ -4,27 +4,27 @@ import { Button } from "./ui/button";
 
 export default function Footer() {
   return (
-    <footer className="py-6 bg-card border-t">
+    <footer className="py-8 bg-card border-t">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-        <p className="text-sm text-muted-foreground mb-4 md:mb-0">
+        <p className="text-lg text-muted-foreground mb-4 md:mb-0">
           &copy; {new Date().getFullYear()} FolioForge. All Rights Reserved.
         </p>
         <div className="flex items-center gap-2">
-            <Button variant="ghost" size="icon" asChild>
+            <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary transition-colors duration-300">
                 <Link href="#" target="_blank" rel="noopener noreferrer">
-                    <Github className="h-5 w-5" />
+                    <Github className="h-6 w-6" />
                     <span className="sr-only">GitHub</span>
                 </Link>
             </Button>
-            <Button variant="ghost" size="icon" asChild>
+            <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary transition-colors duration-300">
                 <Link href="#" target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="h-5 w-5" />
+                    <Linkedin className="h-6 w-6" />
                     <span className="sr-only">LinkedIn</span>
                 </Link>
             </Button>
-            <Button variant="ghost" size="icon" asChild>
+            <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary transition-colors duration-300">
                 <Link href="#" target="_blank" rel="noopener noreferrer">
-                    <Twitter className="h-5 w-5" />
+                    <Twitter className="h-6 w-6" />
                     <span className="sr-only">Twitter</span>
                 </Link>
             </Button>
