@@ -41,12 +41,11 @@ export default function HeroSection() {
           <div className="hidden lg:flex justify-center">
             <div className="relative">
                 <Image
-                  src="https://placehold.co/400x400.png"
-                  alt="Headshot"
+                  src="https://storage.googleapis.com/aai-web-samples/aditya-choudhary.jpg"
+                  alt="Headshot of Aditya Choudhary"
                   width={320}
                   height={320}
                   className="rounded-full shadow-2xl border-4 border-secondary"
-                  data-ai-hint="professional developer"
                 />
                 <div className="absolute inset-0 rounded-full ring-4 ring-primary/50 ring-offset-4 ring-offset-background animate-pulse"></div>
             </div>
