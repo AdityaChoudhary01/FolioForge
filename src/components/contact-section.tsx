@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import React from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -16,7 +17,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Send } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 
 const formSchema = z.object({
@@ -35,6 +36,7 @@ const formSchema = z.object({
 
 export default function ContactSection() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -45,13 +47,38 @@ export default function ContactSection() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Something went wrong');
+      }
+
+      toast({
+        title: "Message Sent!",
+        description: "Thanks for reaching out. I'll get back to you soon.",
+      });
+      form.reset();
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : "An unknown error occurred";
+      toast({
+        variant: "destructive",
+        title: "Uh oh! Something went wrong.",
+        description: errorMessage,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -113,9 +140,18 @@ export default function ContactSection() {
                 )}
               />
               <div className="text-center">
-                <Button type="submit" size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <Send className="mr-2 h-5 w-5"/>
-                  Send Message
+                <Button type="submit" size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="mr-2 h-5 w-5"/>
+                      Send Message
+                    </>
+                  )}
                 </Button>
               </div>
             </form>
