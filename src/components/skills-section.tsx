@@ -1,19 +1,19 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code, Database, Server, Wind } from "lucide-react";
+import { Code, Database, Server, Wind, Cog } from "lucide-react";
 
 const skills = {
-  "Frontend": ["React", "Next.js", "Tailwind CSS", "TypeScript", "HTML5", "CSS3"],
-  "Backend": ["Node.js", "Express.js", "Python", "Flask"],
-  "Databases": ["MongoDB", "PostgreSQL", "Firebase", "MySQL"],
-  "DevOps & Tools": ["Docker", "Git", "Webpack", "Vite", "Jest"],
+  "Frontend": ["JavaScript", "React.js", "HTML5", "CSS3", "Tailwind CSS", "Framer Motion"],
+  "Backend": ["Node.js", "Express.js", "Java", "Python"],
+  "Databases": ["MongoDB", "SQL"],
+  "Languages & Tools": ["Git & GitHub", "C", "C++", "OOPs"],
 };
 
 const icons: { [key: string]: React.ReactNode } = {
   "Frontend": <Code className="h-8 w-8 text-primary" />,
   "Backend": <Server className="h-8 w-8 text-accent" />,
   "Databases": <Database className="h-8 w-8 text-green-500" />,
-  "DevOps & Tools": <Wind className="h-8 w-8 text-blue-500" />,
+  "Languages & Tools": <Cog className="h-8 w-8 text-blue-500" />,
 }
 
 export default function SkillsSection() {

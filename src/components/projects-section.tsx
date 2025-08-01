@@ -89,7 +89,7 @@ const initialProjects: Project[] = [
         imageUrl: 'https://placehold.co/600x400.png',
         githubUrl: '#',
         liveUrl: '#',
-        tags: ['React', 'Node.js', 'MongoDB', 'JWT', 'Socket.io'],
+        tags: ['JavaScript', 'React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Cloudinary', 'Axios', 'React Hot Toast'],
     },
 ];
 
@@ -180,7 +180,7 @@ export default function ProjectsSection() {
             </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map(project => (
             <div key={project.id} className="group">
               <ProjectCard project={project} />

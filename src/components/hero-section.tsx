@@ -13,13 +13,16 @@ export default function HeroSection() {
           <div className="text-center lg:text-left">
             <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4">
               <span className="block text-foreground/80">Hi, I'm</span>
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">FolioForge</span>
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Aditya Choudhary</span>
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl font-medium text-muted-foreground mb-8">
-              Creative Developer & MERN Stack Specialist
+              Passionate Full Stack Developer
+            </p>
+            <p className="max-w-xl mx-auto lg:mx-0 mb-4 text-base md:text-lg text-foreground/80">
+              I love building beautiful, performant web applications and exploring new technologies. I also have a strong foundation in Data Structures and Algorithms (DSA) using Java, which helps me write efficient and scalable code.
             </p>
             <p className="max-w-xl mx-auto lg:mx-0 mb-8 text-base md:text-lg text-foreground/80">
-              I build beautiful, functional, and user-centric web applications. Welcome to my creative space where I showcase my work and journey in the world of code.
+              When I'm not coding, you’ll find me reading, hiking, or experimenting with creative projects!
             </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
