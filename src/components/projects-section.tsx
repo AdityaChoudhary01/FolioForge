@@ -97,7 +97,9 @@ export default function ProjectsSection() {
     <section id="projects" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-headline text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Featured Projects</h2>
+          <h2 className="font-headline text-4xl md:text-5xl font-bold">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Featured Projects</span>
+          </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg">Here are some of the projects I'm proud of. Use the magic wand to re-order them based on your interests!</p>
         </div>
 
@@ -108,12 +110,12 @@ export default function ProjectsSection() {
                     placeholder="e.g., 'show me projects using real-time databases' or 'I like e-commerce'"
                     value={preferences}
                     onChange={(e) => setPreferences(e.target.value)}
-                    className="pr-24 h-12 text-base"
+                    className="pr-24 h-12 text-base bg-secondary/50"
                     disabled={isLoading}
                     onKeyDown={(e) => e.key === 'Enter' && handleAdjustLayout()}
                 />
                 <Button 
-                    className="absolute right-14 top-1/2 -translate-y-1/2 h-9 w-9 bg-accent hover:bg-accent/90 text-accent-foreground rounded-full"
+                    className="absolute right-14 top-1/2 -translate-y-1/2 h-9 w-9 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full"
                     onClick={handleAdjustLayout}
                     disabled={isLoading}
                     aria-label="Adjust Layout"

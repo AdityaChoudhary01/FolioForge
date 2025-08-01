@@ -55,13 +55,15 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-gradient-to-br from-background to-secondary/30">
+    <section id="contact" className="py-24 md:py-32 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Get In Touch</h2>
+          <h2 className="font-headline text-4xl md:text-5xl font-bold">
+             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Get In Touch</span>
+          </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg">Have a question or want to work together? Drop me a line.</p>
         </div>
-        <Card className="max-w-2xl mx-auto p-4 sm:p-8 border-transparent bg-card/80 backdrop-blur-sm">
+        <Card className="max-w-2xl mx-auto p-4 sm:p-8 bg-secondary/50 backdrop-blur-sm border-border/50">
          <CardContent className="p-0">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -73,7 +75,7 @@ export default function ContactSection() {
                     <FormItem>
                       <FormLabel className="text-lg">Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your Name" {...field} className="h-12" />
+                        <Input placeholder="Your Name" {...field} className="h-12 bg-background/50" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -86,7 +88,7 @@ export default function ContactSection() {
                     <FormItem>
                       <FormLabel className="text-lg">Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="your.email@example.com" {...field} className="h-12"/>
+                        <Input placeholder="your.email@example.com" {...field} className="h-12 bg-background/50"/>
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -102,7 +104,7 @@ export default function ContactSection() {
                     <FormControl>
                       <Textarea
                         placeholder="Tell me how I can help you..."
-                        className="resize-none min-h-[150px]"
+                        className="resize-none min-h-[150px] bg-background/50"
                         {...field}
                       />
                     </FormControl>
@@ -111,7 +113,7 @@ export default function ContactSection() {
                 )}
               />
               <div className="text-center">
-                <Button type="submit" size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                <Button type="submit" size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                   <Send className="mr-2 h-5 w-5"/>
                   Send Message
                 </Button>

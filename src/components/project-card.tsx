@@ -12,7 +12,7 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card className="flex flex-col h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 border-transparent hover:border-primary bg-gradient-to-br from-card to-secondary/20 dark:to-secondary/10">
+    <Card className="flex flex-col h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 border border-border/50 hover:border-primary bg-secondary/30">
       <CardHeader>
         <div className="aspect-video relative mb-4 overflow-hidden rounded-lg">
             <Image
@@ -26,12 +26,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <CardTitle className="font-headline text-2xl">{project.title}</CardTitle>
         <div className="flex flex-wrap gap-2 pt-2">
           {project.tags.map(tag => (
-            <Badge key={tag} variant="secondary" className="bg-accent/10 text-accent border-accent/20">{tag}</Badge>
+            <Badge key={tag} variant="secondary" className="bg-primary/10 text-primary border-primary/20">{tag}</Badge>
           ))}
         </div>
       </CardHeader>
       <CardContent className="flex-grow">
-        <CardDescription className="text-base">{project.description}</CardDescription>
+        <CardDescription className="text-base text-muted-foreground">{project.description}</CardDescription>
       </CardContent>
       <CardFooter className="flex justify-start gap-4">
         <Button variant="outline" asChild>
