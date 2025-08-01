@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from 'react';
@@ -8,6 +9,7 @@ import { getAdjustedLayout } from '@/app/actions';
 import ProjectCard from './project-card';
 import { Wand2, Loader2, RotateCcw } from 'lucide-react';
 import type { Project } from '@/types';
+import { motion } from 'framer-motion';
 
 const initialProjects: Project[] = [
     {
@@ -92,6 +94,29 @@ const initialProjects: Project[] = [
         tags: ['JavaScript', 'React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Cloudinary', 'Axios', 'React Hot Toast'],
     },
 ];
+
+const containerVariants = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+};
+  
+const cardVariants = {
+    hidden: { y: 20, opacity: 0, scale: 0.95 },
+    visible: {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        transition: {
+        duration: 0.4,
+        ease: [0.6, 0.05, -0.01, 0.9],
+        },
+    },
+};
 
 export default function ProjectsSection() {
   const [projects, setProjects] = useState<Project[]>(initialProjects);
@@ -180,13 +205,23 @@ export default function ProjectsSection() {
             </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+        >
           {projects.map(project => (
-            <div key={project.id} className="group">
+            <motion.div 
+                key={project.id} 
+                className="group"
+                variants={cardVariants}
+            >
               <ProjectCard project={project} />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
