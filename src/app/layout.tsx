@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
+import WhatsAppFAB from '@/components/whatsapp-fab';
 
 export const metadata: Metadata = {
   title: 'FolioForge',
@@ -22,6 +23,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         {children}
+        <WhatsAppFAB />
         <Toaster />
       </body>
     </html>
