@@ -55,25 +55,25 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-secondary/30">
+    <section id="contact" className="py-20 md:py-28 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-headline text-4xl md:text-5xl font-bold">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-bold">
              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Get In Touch</span>
           </h2>
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg">Have a question or want to work together? Drop me a line.</p>
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-base md:text-lg">Have a question or want to work together? Drop me a line.</p>
         </div>
         <Card className="max-w-2xl mx-auto p-4 sm:p-8 bg-secondary/50 backdrop-blur-sm border-border/50">
          <CardContent className="p-0">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 md:space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <FormField
                   control={form.control}
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-lg">Name</FormLabel>
+                      <FormLabel className="text-base md:text-lg">Name</FormLabel>
                       <FormControl>
                         <Input placeholder="Your Name" {...field} className="h-12 bg-background/50" />
                       </FormControl>
@@ -86,7 +86,7 @@ export default function ContactSection() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-lg">Email</FormLabel>
+                      <FormLabel className="text-base md:text-lg">Email</FormLabel>
                       <FormControl>
                         <Input placeholder="your.email@example.com" {...field} className="h-12 bg-background/50"/>
                       </FormControl>
@@ -100,7 +100,7 @@ export default function ContactSection() {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-lg">Message</FormLabel>
+                    <FormLabel className="text-base md:text-lg">Message</FormLabel>
                     <FormControl>
                       <Textarea
                         placeholder="Tell me how I can help you..."

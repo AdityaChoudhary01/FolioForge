@@ -94,13 +94,13 @@ export default function ProjectsSection() {
   }
 
   return (
-    <section id="projects" className="py-24 md:py-32 bg-background">
+    <section id="projects" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="font-headline text-4xl md:text-5xl font-bold">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-bold">
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Featured Projects</span>
           </h2>
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg">Here are some of the projects I'm proud of. Use the magic wand to re-order them based on your interests!</p>
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-base md:text-lg">Here are some of the projects I'm proud of. Use the magic wand to re-order them based on your interests!</p>
         </div>
 
         <div className="max-w-2xl mx-auto mb-12">
@@ -110,7 +110,7 @@ export default function ProjectsSection() {
                     placeholder="e.g., 'show me projects using real-time databases' or 'I like e-commerce'"
                     value={preferences}
                     onChange={(e) => setPreferences(e.target.value)}
-                    className="pr-24 h-12 text-base bg-secondary/50"
+                    className="pr-24 h-12 text-sm sm:text-base bg-secondary/50"
                     disabled={isLoading}
                     onKeyDown={(e) => e.key === 'Enter' && handleAdjustLayout()}
                 />
@@ -135,7 +135,7 @@ export default function ProjectsSection() {
             </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map(project => (
             <div key={project.id} className="group">
               <ProjectCard project={project} />
