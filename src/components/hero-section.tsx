@@ -13,7 +13,7 @@ export default function HeroSection() {
           <div className="text-center lg:text-left">
              <div className="flex justify-center lg:hidden mb-8">
                 <div className="relative">
-                    <Image
+                    <img
                       src="https://storage.googleapis.com/aai-web-samples/aditya-choudhary.jpg"
                       alt="Headshot of Aditya Choudhary"
                       width={160}
@@ -52,7 +52,7 @@ export default function HeroSection() {
           </div>
           <div className="hidden lg:flex justify-center">
             <div className="relative">
-                <Image
+                <img
                   src="https://storage.googleapis.com/aai-web-samples/aditya-choudhary.jpg"
                   alt="Headshot of Aditya Choudhary"
                   width={320}
