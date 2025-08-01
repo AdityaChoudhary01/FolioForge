@@ -16,7 +16,7 @@ const initialProjects: Project[] = [
         description: 'YumRide is an innovative food delivery platform that connects users with their favorite local restaurants and delivers delicious meals right to their doorstep.',
         imageUrl: 'https://adityachportfolio3.netlify.app/images/yumride.png',
         githubUrl: '#',
-        liveUrl: '#',
+        liveUrl: 'https://food-delivery-frontend-mo9e.onrender.com/',
         tags: ['JavaScript', 'React', 'Node.js', 'Express', 'MongoDB'],
     },
     {
@@ -25,7 +25,7 @@ const initialProjects: Project[] = [
         description: 'A QR code generator that allows users to create custom QR codes for various purposes. Users can input text, URLs, or contact information to generate QR codes that can be downloaded or shared.',
         imageUrl: 'https://adityachportfolio3.netlify.app/images/qr-generator.png',
         githubUrl: '#',
-        liveUrl: '#',
+        liveUrl: 'https://adityachoudhary01.github.io/QrCodeGenerator/',
         tags: ['JavaScript', 'REST API', 'QRCode', 'Html', 'CSS'],
     },
     {
@@ -34,7 +34,7 @@ const initialProjects: Project[] = [
         description: 'A dynamic weather application that enables users to check current weather conditions based on city or location input. It fetches real-time weather data from a REST API.',
         imageUrl: 'https://adityachportfolio3.netlify.app/images/weather-app.png',
         githubUrl: '#',
-        liveUrl: '#',
+        liveUrl: 'https://adityachoudhary01.github.io/WeatherApp/',
         tags: ['JavaScript', 'Html', 'CSS', 'REST API'],
     },
     {
@@ -43,7 +43,7 @@ const initialProjects: Project[] = [
         description: 'A study platform for students of AKTU that provides resources, notes, and previous year question papers for various courses and subjects.',
         imageUrl: 'https://adityachportfolio3.netlify.app/images/aktuwrld.png',
         githubUrl: '#',
-        liveUrl: '#',
+        liveUrl: 'https://aktuwrld.netlify.app/',
         tags: ['JavaScript', 'Html', 'CSS'],
     },
     {
@@ -52,7 +52,7 @@ const initialProjects: Project[] = [
         description: 'A wifi QR code generator that allows users to create QR codes for connecting to Wi-Fi networks by inputting network SSID, password, and encryption type.',
         imageUrl: 'https://adityachportfolio3.netlify.app/images/wifi-qr-code-generator.png',
         githubUrl: '#',
-        liveUrl: '#',
+        liveUrl: 'https://adityachoudhary01.github.io/WifiQrCodeGenerator/',
         tags: ['JavaScript', 'Html', 'CSS', 'REST API'],
     },
     {
@@ -61,7 +61,7 @@ const initialProjects: Project[] = [
         description: 'A personal portfolio website showcasing projects, skills, and contact information. Built with modern web technologies for an interactive experience.',
         imageUrl: 'https://adityachportfolio3.netlify.app/images/portfolio-website.png',
         githubUrl: '#',
-        liveUrl: '#',
+        liveUrl: 'https://adityachoudharyportfolio.netlify.app/',
         tags: ['React', 'Tailwind CSS', 'JavaScript'],
     },
     {
@@ -70,7 +70,7 @@ const initialProjects: Project[] = [
         description: 'An expense tracking application that helps users manage their finances by recording income and expenses, with charts and graphs for visualization.',
         imageUrl: 'https://adityachportfolio3.netlify.app/images/expense-tracker.png',
         githubUrl: '#',
-        liveUrl: '#',
+        liveUrl: 'https://khatabook-qcb9.onrender.com/',
         tags: ['React', 'Node.js', 'Express', 'MongoDB'],
     },
     {
@@ -79,7 +79,7 @@ const initialProjects: Project[] = [
         description: 'JAT Universal is a comprehensive platform offering a wide range of services, including e-commerce, logistics, and customer support.',
         imageUrl: 'https://adityachportfolio3.netlify.app/images/jat-universal.png',
         githubUrl: '#',
-        liveUrl: '#',
+        liveUrl: 'https://jatuniversal-history.netlify.app/',
         tags: ['Html', 'CSS'],
     },
     {
@@ -88,7 +88,7 @@ const initialProjects: Project[] = [
         description: 'A full-stack real-time chat application built with the MERN stack. It features user authentication with JWT, real-time messaging with Socket.io, and a modern UI.',
         imageUrl: 'https://adityachportfolio3.netlify.app/images/chatty.png',
         githubUrl: '#',
-        liveUrl: '#',
+        liveUrl: 'https://chat-app-adityachoudhary.netlify.app/',
         tags: ['JavaScript', 'React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Cloudinary', 'Axios', 'React Hot Toast'],
     },
 ];
