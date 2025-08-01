@@ -54,14 +54,14 @@ export default function HeroSection() {
             animate="visible"
           >
              <motion.div className="flex justify-center lg:hidden mb-8" variants={imageVariants} initial="hidden" animate="visible">
-                <div className="relative w-48 h-48">
+                <div className="relative w-40 h-48">
                     <div className="absolute inset-0 rounded-full bg-primary animate-pulse opacity-50"></div>
                     <img
                         src="/profile.jpg"
                         alt="Headshot of Aditya Choudhary"
-                        width={192}
+                        width={160}
                         height={192}
-                        className="relative object-cover rounded-full border-4 border-background"
+                        className="relative object-cover w-full h-full rounded-full border-4 border-background"
                         data-ai-hint="person headshot"
                     />
                 </div>
@@ -94,14 +94,14 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
           <motion.div className="hidden lg:flex justify-center" variants={imageVariants} initial="hidden" animate="visible">
-            <div className="relative w-80 h-80">
+            <div className="relative w-72 h-80">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-accent animate-pulse opacity-70 blur-2xl"></div>
                 <img
                   src="/profile.jpg"
                   alt="Headshot of Aditya Choudhary"
-                  width={320}
+                  width={288}
                   height={320}
-                  className="relative object-cover rounded-full border-8 border-background/50"
+                  className="relative object-cover w-full h-full rounded-full border-8 border-background/50"
                   data-ai-hint="person headshot"
                 />
             </div>
