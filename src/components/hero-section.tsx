@@ -13,11 +13,12 @@ export default function HeroSection() {
              <div className="flex justify-center lg:hidden mb-8">
                 <div className="relative">
                     <img
-                      src="/your-image-filename.jpg"
+                      src="https://placehold.co/160x160.png"
                       alt="Headshot of Aditya Choudhary"
                       width={160}
                       height={160}
                       className="rounded-full shadow-2xl border-4 border-secondary object-cover"
+                      data-ai-hint="person headshot"
                     />
                     <div className="absolute inset-0 rounded-full ring-4 ring-primary/50 ring-offset-4 ring-offset-background animate-pulse"></div>
                 </div>
@@ -52,11 +53,12 @@ export default function HeroSection() {
           <div className="hidden lg:flex justify-center">
             <div className="relative">
                 <img
-                  src="/your-image-filename.jpg"
+                  src="https://placehold.co/320x320.png"
                   alt="Headshot of Aditya Choudhary"
                   width={320}
                   height={320}
                   className="rounded-full shadow-2xl border-4 border-secondary object-cover"
+                  data-ai-hint="person headshot"
                 />
                 <div className="absolute inset-0 rounded-full ring-4 ring-primary/50 ring-offset-4 ring-offset-background animate-pulse"></div>
             </div>
