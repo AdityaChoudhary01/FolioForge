@@ -1,24 +1,23 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Download, ArrowRight } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <header className="relative pt-32 pb-24 md:pt-48 md:pb-40 lg:pt-56 lg:pb-48 min-h-screen flex items-center justify-center overflow-hidden" id="about">
+    <header className="relative pt-32 pb-24 md:pt-48 md:pb-40 lg:pb-48 flex items-center justify-center overflow-hidden min-h-[calc(100vh-5rem)]" id="about">
        <div className="absolute top-0 left-0 w-full h-full bg-background/80 backdrop-blur-sm z-10"></div>
        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/10 via-transparent to-accent/10"></div>
        <div className="container mx-auto px-4 z-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="text-center lg:text-left">
              <div className="flex justify-center lg:hidden mb-8">
                 <div className="relative">
                     <img
-                      src="https://storage.googleapis.com/aai-web-samples/aditya-choudhary.jpg"
+                      src="/your-image-filename.jpg"
                       alt="Headshot of Aditya Choudhary"
                       width={160}
                       height={160}
-                      className="rounded-full shadow-2xl border-4 border-secondary"
+                      className="rounded-full shadow-2xl border-4 border-secondary object-cover"
                     />
                     <div className="absolute inset-0 rounded-full ring-4 ring-primary/50 ring-offset-4 ring-offset-background animate-pulse"></div>
                 </div>
@@ -53,11 +52,11 @@ export default function HeroSection() {
           <div className="hidden lg:flex justify-center">
             <div className="relative">
                 <img
-                  src="https://storage.googleapis.com/aai-web-samples/aditya-choudhary.jpg"
+                  src="/your-image-filename.jpg"
                   alt="Headshot of Aditya Choudhary"
                   width={320}
                   height={320}
-                  className="rounded-full shadow-2xl border-4 border-secondary"
+                  className="rounded-full shadow-2xl border-4 border-secondary object-cover"
                 />
                 <div className="absolute inset-0 rounded-full ring-4 ring-primary/50 ring-offset-4 ring-offset-background animate-pulse"></div>
             </div>
