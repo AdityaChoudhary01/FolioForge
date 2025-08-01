@@ -3,7 +3,7 @@ import { Button } from './ui/button';
 import { MessageSquare } from 'lucide-react';
 
 export default function WhatsAppFAB() {
-  const phoneNumber = '1234567890'; // Replace with your WhatsApp number
+  const phoneNumber = '918527633416'; // Replace with your WhatsApp number
   const message = "Hello! I'm interested in working with you."; // Optional pre-filled message
 
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
