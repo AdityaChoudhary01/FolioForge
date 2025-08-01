@@ -54,16 +54,20 @@ export default function HeroSection() {
             animate="visible"
           >
              <motion.div className="flex justify-center lg:hidden mb-8" variants={imageVariants} initial="hidden" animate="visible">
-                <div className="relative">
+                <div 
+                  className="relative w-48 h-52 flex items-center justify-center"
+                  style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+                >
+                    <div className="absolute inset-0 bg-primary animate-pulse"></div>
                     <img
                       src="/profile.jpg"
                       alt="Headshot of Aditya Choudhary"
-                      width={160}
-                      height={160}
-                      className="rounded-full shadow-2xl border-4 border-secondary object-cover"
+                      width={184}
+                      height={200}
+                      className="object-cover"
+                      style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
                       data-ai-hint="person headshot"
                     />
-                    <div className="absolute inset-0 rounded-full ring-4 ring-primary/50 ring-offset-4 ring-offset-background animate-pulse"></div>
                 </div>
               </motion.div>
             <motion.h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4" variants={itemVariants}>
@@ -94,16 +98,20 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
           <motion.div className="hidden lg:flex justify-center" variants={imageVariants} initial="hidden" animate="visible">
-            <div className="relative">
+            <div 
+              className="relative w-80 h-[350px] flex items-center justify-center"
+              style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+            >
+                <div className="absolute inset-0 bg-primary animate-pulse"></div>
                 <img
                   src="/profile.jpg"
                   alt="Headshot of Aditya Choudhary"
-                  width={320}
-                  height={320}
-                  className="rounded-full shadow-2xl border-4 border-secondary object-cover"
+                  width={312}
+                  height={342}
+                  className="object-cover"
+                  style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
                   data-ai-hint="person headshot"
                 />
-                <div className="absolute inset-0 rounded-full ring-4 ring-primary/50 ring-offset-4 ring-offset-background animate-pulse"></div>
             </div>
           </motion.div>
         </div>
