@@ -11,6 +11,18 @@ export default function HeroSection() {
        <div className="container mx-auto px-4 z-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
+             <div className="flex justify-center lg:hidden mb-8">
+                <div className="relative">
+                    <Image
+                      src="https://storage.googleapis.com/aai-web-samples/aditya-choudhary.jpg"
+                      alt="Headshot of Aditya Choudhary"
+                      width={160}
+                      height={160}
+                      className="rounded-full shadow-2xl border-4 border-secondary"
+                    />
+                    <div className="absolute inset-0 rounded-full ring-4 ring-primary/50 ring-offset-4 ring-offset-background animate-pulse"></div>
+                </div>
+              </div>
             <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4">
               <span className="block text-foreground/80">Hi, I'm</span>
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Aditya Choudhary</span>
