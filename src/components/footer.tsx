@@ -11,13 +11,13 @@ export default function Footer() {
         </p>
         <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary transition-colors duration-300">
-                <Link href="#" target="_blank" rel="noopener noreferrer">
+                <Link href="https://github.com/AdityaChoudhary01" target="_blank" rel="noopener noreferrer">
                     <Github className="h-6 w-6" />
                     <span className="sr-only">GitHub</span>
                 </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary transition-colors duration-300">
-                <Link href="#" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.linkedin.com/in/aditya-kumar-38093a304/" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="h-6 w-6" />
                     <span className="sr-only">LinkedIn</span>
                 </Link>
