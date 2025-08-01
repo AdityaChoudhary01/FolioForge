@@ -53,10 +53,10 @@ export default function HeroSection() {
             initial="hidden"
             animate="visible"
           >
-             <motion.div className="flex justify-center lg:hidden mb-8" variants={imageVariants}>
+             <motion.div className="flex justify-center lg:hidden mb-8" variants={imageVariants} initial="hidden" animate="visible">
                 <div className="relative">
                     <img
-                      src="/your-image-filename.jpg"
+                      src="https://placehold.co/160x160.png"
                       alt="Headshot of Aditya Choudhary"
                       width={160}
                       height={160}
@@ -96,7 +96,7 @@ export default function HeroSection() {
           <motion.div className="hidden lg:flex justify-center" variants={imageVariants} initial="hidden" animate="visible">
             <div className="relative">
                 <img
-                  src="/your-image-filename.jpg"
+                  src="https://placehold.co/320x320.png"
                   alt="Headshot of Aditya Choudhary"
                   width={320}
                   height={320}

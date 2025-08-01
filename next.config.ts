@@ -18,12 +18,6 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'storage.googleapis.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
         hostname: 'adityachportfolio3.netlify.app',
         port: '',
         pathname: '/**',
