@@ -13,7 +13,7 @@ export default function HeroSection() {
              <div className="flex justify-center lg:hidden mb-8">
                 <div className="relative">
                     <img
-                      src="https://placehold.co/160x160.png"
+                      src="../../WhatsApp Image 2025-08-01 at 16.30.52_67dfb0d4.jpg"
                       alt="Headshot of Aditya Choudhary"
                       width={160}
                       height={160}
@@ -53,7 +53,7 @@ export default function HeroSection() {
           <div className="hidden lg:flex justify-center">
             <div className="relative">
                 <img
-                  src="https://placehold.co/320x320.png"
+                  src="../../WhatsApp Image 2025-08-01 at 16.30.52_67dfb0d4.jpg"
                   alt="Headshot of Aditya Choudhary"
                   width={320}
                   height={320}
