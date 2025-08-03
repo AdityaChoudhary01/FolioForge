@@ -16,7 +16,7 @@ const initialProjects: Project[] = [
         id: 'proj1',
         title: 'PeerNotez',
         description: 'PeerNotez is a collaborative platform dedicated to helping students learn and share knowledge freely. Use the search and filters below to find notes from universities and courses worldwide, or create an account to start uploading your own.',
-        imageUrl: 'https://res.cloudinary.com/dmtnonxtt/image/upload/v1754216559/hz591kig6czquhzy58i5.jpg',
+        imageUrl: 'https://res.cloudinary.com/dmtnonxtt/image/upload/v1754217822/opjk6vozuudbht8pqeph.png',
         githubUrl: '#',
         liveUrl: 'https://peernotez.netlify.app/',
         tags: ['JavaScript', 'React', 'Node.js', 'Express', 'MongoDB','AWS','Cloudinary'],
