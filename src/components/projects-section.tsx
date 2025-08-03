@@ -14,6 +14,15 @@ import { motion } from 'framer-motion';
 const initialProjects: Project[] = [
     {
         id: 'proj1',
+        title: 'PeerNotez',
+        description: 'PeerNotez is a collaborative platform dedicated to helping students learn and share knowledge freely. Use the search and filters below to find notes from universities and courses worldwide, or create an account to start uploading your own.',
+        imageUrl: 'https://peernotez.netlify.app/favicon.ico',
+        githubUrl: '#',
+        liveUrl: 'https://peernotez.netlify.app/',
+        tags: ['JavaScript', 'React', 'Node.js', 'Express', 'MongoDB','AWS','Cloudinary'],
+    },
+    {
+        id: 'proj10',
         title: 'YumRide',
         description: 'YumRide is an innovative food delivery platform that connects users with their favorite local restaurants and delivers delicious meals right to their doorstep.',
         imageUrl: 'https://adityachportfolio3.netlify.app/images/yumride.png',
